@@ -3,18 +3,15 @@
 \xdef\CurrentStop{0.7}
 
 \begin{tikzpicture}
-\begin{axis}[domain=0:1.2, 
-             axis x line=middle, 
-             axis y line=left, 
+\begin{axis}[standard,
+             domain=0:1.2, 
              xtick={\myDelta,\CurrentStop,1}, 
              xticklabels={$DT_s$,$\left(\Delta_1 + D\right)T_s$,$T_s$
                           },
              ytick={1},
              yticklabels={$I_{L_{max}}$},
-             x axis line style={->},
              xlabel={$t$},
              xlabel style={align=right}, 
-             y axis line style={->},
              width=0.8\textwidth,
              height=6cm,
              %width=\uncontrolledRectifierGraphWidth,

@@ -10,19 +10,16 @@
 \xdef\myPhi{\pgfmathresult}
 
 
-\begin{axis}[domain=0:400, 
-             axis x line=middle, 
-             axis y line=left, 
+\begin{axis}[standard,
+             domain=0:400, 
              xtick={180,\myBeta,360}, 
              xticklabels={$\pi$,$\beta$,$2\pi$},
              ytick={0}, 
              yticklabels={\color{white}$-V_s$},
-             x axis line style={->},
              xlabel={$\omega{}t$},
-             xlabel style={align=right}, 
              ymax=1.5,
-             y axis line style={->},
              width=0.8\textwidth,
+             xlabel style={align=right}, 
              height=6cm,
              %width=\uncontrolledRectifierGraphWidth,
              ] 

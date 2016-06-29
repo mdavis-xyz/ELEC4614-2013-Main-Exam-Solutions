@@ -14,7 +14,7 @@
 \usepackage{caption}           %to use minipage for inserting figures
 \usepackage{float}             %for H figure and table placements Here.
 \usepackage{comment}          %for bulk comments
-\usepackage[colorinlistoftodos]{todonotes}%to do notes
+\usepackage[colorinlistoftodos, disable]{todonotes}%to do notes
 \usepackage[parfill]{parskip}  %To use blank lines instead of indentation to separate paragraphs
 \usepackage{ifthen}            %ifthenelse command
 \usepackage[margin=3cm]{geometry} %Change margin size
@@ -41,6 +41,8 @@
 
 \usepackage{varioref}
 
+\listfiles
+
 \usepackage[hidelinks,%clickable cross references and URLs
             pdftex,%pdf meta data
             pdfauthor={Matthew Davis},%pdf meta data
@@ -63,6 +65,21 @@
 %\setlength{\cftsubsecnumwidth}{3.25em}
 \setlength{\cftsubsubsecnumwidth}{4em}
 
+
+\pgfplotsset{
+    standard/.style={
+        axis x line=middle,
+        axis y line=left,
+        xlabel style={align=right}, 
+        ticklabel style={fill=white},
+        set layers=tick labels on top% use layers and choose the new layer set
+    },
+    layers/tick labels on top/.define layer set=% define the new layer set based on the standard one
+        {axis background,axis grid,axis ticks,axis lines,main,%
+          axis tick labels,% <- tick labels before main
+          axis descriptions,axis foreground}
+        {/pgfplots/layers/standard}
+}
 
 
 

@@ -8,9 +8,8 @@
 
 \begin{center}
 \begin{tikzpicture}
-\begin{axis}[domain=0:400, 
-             axis x line=middle, 
-             axis y line=left, 
+\begin{axis}[standard,
+             domain=0:400, 
              xtick={30.366,180,360}, 
              xticklabels={\unit[1.678]{ms},
                           \unit[10]{ms},
@@ -22,10 +21,8 @@
                           $-I_0{=}96.4$,
                           %$\frac{V_d}{R}{=}100$},
                           },
-             x axis line style={->},
              xlabel={$t$},
              xlabel style={align=right}, 
-             y axis line style={->},
              width=0.8\textwidth,
              height=6cm,
              %width=\uncontrolledRectifierGraphWidth,
